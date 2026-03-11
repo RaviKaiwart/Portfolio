@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #fcfcfc;
+    --accent: #ff3c3c;
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --border: rgba(255, 255, 255, 0.1);
+  }
+
+  * {
+    @apply border-border;
+    cursor: none !important; /* Hide default cursor to use custom one */
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-accent selection:text-white overflow-x-hidden;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-background;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-white/10 rounded-full hover:bg-accent transition-colors;
+}
+
+/* Smooth Scrolling Support */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-scrolling {
+  pointer-events: none;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Glassmorphism Utilities */
+.glass {
+  @apply bg-white/5 backdrop-blur-xl border border-white/10;
+}
+
+.glass-hover {
+  @apply transition-all duration-500;
+}
+
+.glass-hover:hover {
+  @apply bg-white/10;
+  border-color: rgba(255, 60, 60, 0.3);
+}
+
+/* Text Reveal Animation */
+.reveal-text {
+  @apply overflow-hidden;
+}
+
+.reveal-text span {
+  @apply inline-block;
+}
