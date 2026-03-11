@@ -75,7 +75,7 @@ export default function About() {
               <div className="absolute bottom-12 left-12 right-12">
                 <p className="text-accent font-bold tracking-[0.3em] text-[10px] uppercase mb-4">Motto</p>
                 <p className="text-white text-2xl md:text-3xl font-black leading-tight uppercase tracking-tighter">
-                  "Turning complex logic into <span className="text-white/40 italic">fluid motion</span>."
+                  &quot;Turning complex logic into <span className="text-white/40 italic">fluid motion</span>.&quot;
                 </p>
               </div>
             </motion.div>

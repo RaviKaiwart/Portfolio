@@ -25,7 +25,7 @@ export default function Contact() {
               className="flex flex-col mb-10"
             >
               <h2 className="text-6xl md:text-8xl font-black text-white uppercase tracking-tighter leading-[0.8]">
-                Let's
+                Let&apos;s
               </h2>
               <h2
                 className="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-[0.8] text-transparent"
@@ -40,7 +40,7 @@ export default function Contact() {
               transition={{ delay: 0.3 }}
               className="text-[#a1a1aa] text-lg font-medium max-w-md leading-relaxed"
             >
-              Based in India, working worldwide. I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.
+              Based in India, working worldwide. I&apos;m always open to discussing new projects, creative ideas or opportunities to be part of your visions.
             </motion.p>
           </div>
 
@@ -51,8 +51,8 @@ export default function Contact() {
               whileInView={{ opacity: 1, x: 0 }}
               className="text-white text-4xl md:text-6xl font-black leading-[1.1] tracking-tighter max-w-xl"
             >
-              Think I'd be a good fit for your team or project? <br />
-              <span className="text-accent inline-block mt-4">Let's</span> <br />
+              Think I&apos;d be a good fit for your team or project? <br />
+              <span className="text-accent inline-block mt-4">Let&apos;s</span> <br />
               <span className="text-accent">connect.</span>
             </motion.h3>
           </div>
@@ -100,7 +100,7 @@ export default function Contact() {
               >
                 <div className="absolute -left-2 top-1/2 -translate-y-1/2 w-4 h-4 bg-[#007aff] rotate-45 rounded-sm" />
                 <p className="text-white text-[10px] md:text-[11px] font-black leading-tight relative z-10 uppercase tracking-widest [word-spacing:0.25rem]">
-                  Proud Chhattisgarhiya <br /> We Don't say yes We say Haww
+                  Proud Chhattisgarhiya <br /> We Don&apos;t say yes We say Haww
                 </p>
               </motion.div>
             </motion.div>
@@ -160,7 +160,7 @@ export default function Contact() {
                       </svg>
                     )
                   },
-                ].map((link, i) => (
+                ].map((link) => (
                   <a
                     key={link.name}
                     href={link.url}
