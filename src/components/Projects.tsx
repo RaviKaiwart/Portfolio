@@ -21,7 +21,7 @@ const projects: Project[] = [
     fullDescription: "AI-Trainmax is a sophisticated optimization system designed to manage and predict train traffic patterns. It utilizes machine learning to minimize delays and maximize throughput in complex rail networks.",
     category: "AI & Optimization",
     image: "https://images.unsplash.com/photo-1474487548417-781cb71495f3?q=80&w=2000&auto=format&fit=crop",
-    link: "https://github.com/ravikaiwart/AI-Trainmax",
+    link: "https://aitrainmax.vercel.app",
     features: ["Real-time traffic prediction", "Genetic algorithm for routing", "Interactive dashboard"],
     technologies: { "Frontend": "React", "Backend": "Python", "AI": "TensorFlow" }
   },

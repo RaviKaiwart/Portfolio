@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 import { useScroll, useTransform, useMotionValueEvent } from 'framer-motion';
 
-const FRAME_COUNT = 74; // 0 to 74 -> 75 frames total
+const FRAME_COUNT = 53; // 0 to 53 -> 54 frames total
 const FRAME_PREFIX = 'frame_';
 const FRAME_SUFFIX = '_delay-0.066s.png';
 
@@ -14,7 +14,7 @@ interface ScrollyCanvasProps {
 export default function ScrollyCanvas({ children }: ScrollyCanvasProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [images, setImages] = useState<HTMLImageElement[]>([]);
+  const imagesRef = useRef<HTMLImageElement[]>([]);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -40,10 +40,11 @@ export default function ScrollyCanvas({ children }: ScrollyCanvasProps) {
 
       loadedImages.push(img);
     }
-    setImages(loadedImages);
+    imagesRef.current = loadedImages;
   }, []);
 
   const drawImage = useCallback((index: number) => {
+    const images = imagesRef.current;
     if (!canvasRef.current || images.length === 0 || !images[index]) return;
 
     const canvas = canvasRef.current;
@@ -85,7 +86,7 @@ export default function ScrollyCanvas({ children }: ScrollyCanvasProps) {
     ctx.fillRect(0, 0, width, height);
 
     ctx.drawImage(img, offsetX, offsetY, drawWidth, drawHeight);
-  }, [images]);
+  }, []);
 
   // Frame calculation based on scroll
   const frameIndex = useTransform(scrollYProgress, [0, 1], [0, FRAME_COUNT]);
