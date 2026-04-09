@@ -84,7 +84,8 @@ export default function Contact() {
             >
               {/* Avatar Container */}
               <div className="relative w-64 h-64 md:w-[22rem] md:h-[22rem] z-10 flex items-center justify-center">
-                <img
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
                   src="/sequence/Memoji.png"
                   alt="Memoji"
                   className="w-full h-full object-contain select-none"

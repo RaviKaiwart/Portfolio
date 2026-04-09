@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState, useCallback } from 'react';
+import { useEffect, useRef, useCallback } from 'react';
 import { useScroll, useTransform, useMotionValueEvent } from 'framer-motion';
 
 const FRAME_COUNT = 53; // 0 to 53 -> 54 frames total
@@ -20,28 +20,6 @@ export default function ScrollyCanvas({ children }: ScrollyCanvasProps) {
     target: containerRef,
     offset: ['start start', 'end end'],
   });
-
-  // Preload images
-  useEffect(() => {
-    const loadedImages: HTMLImageElement[] = [];
-    let loadedCount = 0;
-
-    for (let i = 0; i <= FRAME_COUNT; i++) {
-      const img = new Image();
-      const frameIndex = i.toString().padStart(2, '0');
-      img.src = `/sequence/${FRAME_PREFIX}${frameIndex}${FRAME_SUFFIX}`;
-
-      img.onload = () => {
-        loadedCount++;
-        if (loadedCount === 1) { // Render the first frame as soon as it loads
-          drawImage(0);
-        }
-      };
-
-      loadedImages.push(img);
-    }
-    imagesRef.current = loadedImages;
-  }, []);
 
   const drawImage = useCallback((index: number) => {
     const images = imagesRef.current;
@@ -87,6 +65,28 @@ export default function ScrollyCanvas({ children }: ScrollyCanvasProps) {
 
     ctx.drawImage(img, offsetX, offsetY, drawWidth, drawHeight);
   }, []);
+
+  // Preload images
+  useEffect(() => {
+    const loadedImages: HTMLImageElement[] = [];
+    let loadedCount = 0;
+
+    for (let i = 0; i <= FRAME_COUNT; i++) {
+      const img = new Image();
+      const frameIndex = i.toString().padStart(2, '0');
+      img.src = `/sequence/${FRAME_PREFIX}${frameIndex}${FRAME_SUFFIX}`;
+
+      img.onload = () => {
+        loadedCount++;
+        if (loadedCount === 1) { // Render the first frame as soon as it loads
+          drawImage(0);
+        }
+      };
+
+      loadedImages.push(img);
+    }
+    imagesRef.current = loadedImages;
+  }, [drawImage]);
 
   // Frame calculation based on scroll
   const frameIndex = useTransform(scrollYProgress, [0, 1], [0, FRAME_COUNT]);
