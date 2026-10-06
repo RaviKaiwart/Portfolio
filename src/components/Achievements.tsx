@@ -7,30 +7,16 @@ const achievements = [
   {
     title: "Hackathon Winner",
     organization: "GDGC-GGV HackXSprint",
-    date: "2025",
+    date: "2026",
     description: "Won 1st place for AI-Trainmax, an optimization engine for train traffic management.",
     icon: "🏆"
   },
   {
-    title: "SIH Participant",
+    title: "SIH 2nd Round Qualify Team",
     organization: "Smart India Hackathon",
-    date: "2024",
-    description: "Finalist in the prestigious national level hackathon solving real-world problems.",
+    date: "2025-26",
+    description: "Member of the team that qualified for the 2nd round.",
     icon: "💻"
-  },
-  {
-    title: "Technical Lead",
-    organization: "College Tech Club",
-    date: "2024 - Present",
-    description: "Leading a team of developers to build community-driven projects and workshops.",
-    icon: "🚀"
-  },
-  {
-    title: "100+ Live Users",
-    organization: "Smart Quiz Platform",
-    date: "2023",
-    description: "Successfully managed high-concurrency event for 100+ concurrent students.",
-    icon: "🔥"
   }
 ];
 
@@ -64,11 +50,11 @@ export default function Achievements() {
             whileInView={{ opacity: 1 }}
             className="text-[#a1a1aa] text-lg max-w-sm md:text-right"
           >
-            A track record of excellence in national hackathons and technical leadership.
+            Hackathon recognition and activities.
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {achievements.map((item, index) => (
             <motion.div
               key={index}

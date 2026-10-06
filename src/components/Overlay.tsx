@@ -39,12 +39,6 @@ export default function Overlay() {
                 View Projects
               </a>
               <a
-                href="mailto:ravikaiwart2004@gmail.com"
-                className="px-6 py-3 bg-accent/80 text-white text-[10px] font-black uppercase tracking-widest rounded-full hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(255,60,60,0.2)]"
-              >
-                Hire Me
-              </a>
-              <a
                 href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"

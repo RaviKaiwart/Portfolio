@@ -113,7 +113,7 @@ export default function Navigation() {
             href="mailto:ravikaiwart2004@gmail.com"
             className="px-6 py-2.5 bg-accent text-white text-[10px] font-black uppercase tracking-widest rounded-full hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(255,60,60,0.3)]"
           >
-            Hire Me
+            Hire Me for Internship
           </a>
           <a
             href="/resume.pdf"

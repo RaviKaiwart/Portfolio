@@ -4,17 +4,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const skillsData = [
-  { category: "Programming Languages", items: "Python, C, C++, JavaScript" },
-  { category: "Web Technologies", items: "HTML5, CSS3, Tailwind CSS, Next.js, React" },
-  { category: "AI & Data Science", items: "Machine Learning (ML), Neural Networks, NumPy, Pandas" },
-  { category: "Backend & Databases", items: "Node.js, SQL, SQLite, REST APIs" },
-  { category: "Tools & System", items: "Git/GitHub, UNIX, Windows" },
+  { category: "Design", items: "Figma, Auto Layout, Components & Variants, Prototyping, Typography, Color Systems, Micro-interactions" },
+  { category: "Development background", items: "HTML, CSS, Java, C/C++, Git/GitHub" },
 ];
 
 const strengthsData = [
-  { title: "Teamwork & Collaboration", description: "Effectively work in team-based hackathons. Orchestrated cross-functional teams." },
+  { title: "Teamwork & Collaboration", description: "Work well in teams, including hackathon teams." },
   { title: "Problem Solving", description: "Analyze requirements, break down problems, and implement practical solutions." },
-  { title: "Learning Agility", description: "Quick to learn new tools and concepts, especially in modern development." },
   { title: "Pressure Handling", description: "Comfortable working under tight deadlines, delivering stable solutions." },
 ];
 
@@ -37,7 +33,7 @@ export default function Skills() {
               transition={{ delay: 0.1 }}
               className="text-5xl md:text-[5.5rem] font-black text-white uppercase tracking-tighter leading-none"
             >
-              Technical <br /> <span className="text-white/20">Arsenal</span>
+              Skills
             </motion.h2>
           </div>
           <motion.div 
@@ -45,11 +41,11 @@ export default function Skills() {
             whileInView={{ opacity: 1 }}
             className="text-[#a1a1aa] text-lg max-w-sm md:text-right"
           >
-            A diverse toolkit built for rapid development, precise engineering, and scalable solutions.
+            Design tools and the development background I bring.
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
           {skillsData.map((skill, index) => (
             <motion.div
               key={index}
@@ -79,7 +75,7 @@ export default function Skills() {
 
         {/* Core Strengths - Minimal Grid */}
         <div className="mt-32 pt-24 border-t border-white/5">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-12">
             {strengthsData.map((strength, index) => (
               <motion.div
                 key={index}
