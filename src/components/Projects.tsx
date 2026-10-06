@@ -40,6 +40,8 @@ const mainProjects: Project[] = [
     description: "AI-based mood music recommendation web app. Designed flows for mood detection, playlist recommendations and music discovery, plus camera, mood result and Spotify/YouTube playlist screens. Self-initiated UI/UX project.",
     fullDescription: "AI-based mood music recommendation web app. Designed flows for mood detection, playlist recommendations and music discovery, plus camera, mood result and Spotify/YouTube playlist screens. Self-initiated UI/UX project.",
     image: "/projects/moodstream.png",
+    link: "https://mood-stream-taupe.vercel.app/",
+    buttonText: "Live Demo",
     features: [
       "Mood detection & playlist recommendation flows",
       "Camera integration & mood result screens",
